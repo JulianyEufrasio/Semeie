@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <title>Cadastre-se</title>
+</head>
+<body>
+
+
+    <main>
+        <div class="logo">Semeie.</div>
+
+        <div class="main-content">
+            <div class="sec-welcome">
+                <div class="welcome-info">
+                    <div class="welcome-text">
+                        <h3>Comece a explorar a feira online agora mesmo!</h3>
+                        <p>Entre com seus dados para criar sua conta</p>
+                    </div>
+                    <div class="welcome-img">
+                    <img src="assets/img/fruit shop-amico 1.png" alt="">
+                    </div> 
+                </div>
+            </div>
+            
+            <!-- form -->
+            <form action="">
+                <div class="form-header">
+                    <h3>Crie sua conta!</h3>
+                </div>
+                <!-- wrap form -->
+                <div class="form-content">
+                    <div class="form-content-top">
+                        <div class="form-inputs">
+                            <input class="input" type="text" placeholder="Nome completo" name="nome" required>
+                            <input class="input" type="tel" placeholder="Telefone" name="telefone" required>
+                            
+                            <input class="input" type="text" placeholder="CPF" name="cpf" required>
+                            <input class="input" type="email" placeholder="Email" name="email" required>
+                            <input class="input" type="password" placeholder="Senha" name="psw" required>
+
+                            <!-- type user -->
+                            <div class="check-type">
+                                <div class="check-type-1">
+                                    <input type="checkbox" id="type-user-1" name="type-1"  onclick="checkOnlyOne(this)">
+                                    <label for="terms">Consumidor</label>
+                                </div>
+
+                                <div class="check-type-2">
+                                    <input type="checkbox" id="type-user-2" name="type-2"  onclick="checkOnlyOne(this)">
+                                    <label for="terms">Vendedor</label>
+                                </div>
+                            </div>
+
+                            <span class="line"></span>
+                            <button type="submit" class="btn" id="btnCadastro">Cadastrar</button>
+                            <div class="input-check">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">Li e concordo com os <br> <span>Termos de uso e privacidade</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-divider">
+                        <img src="assets/img/Group 198.png" alt="">
+                    </div>
+
+                    <!-- form bottom -->
+                    <div class="form-content-bottom">
+                        <div class="form-social-input">
+                            <button type="submit">
+                                <div class="btn-social-text">
+                                    <img src="assets/img/google.png" alt="">
+                                    <p>Google</p>
+                                </div>
+                            </button>
+                            <button type="submit">
+                                <div class="btn-social-text">
+                                    <img src="assets/img/face.png" alt="">
+                                    <p>Facebook</p>
+                                </div>
+                            </button>
+                            <span class="line"></span>
+                            <a href="login.html">Já tem uma conta? <span>Entre</span></a>
+                        </div>
+                    </div>
+
+            </form>
+        </div>
+    </main>
+
+    <script src=""></script>
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

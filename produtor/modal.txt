@@ -1,0 +1,131 @@
+<!-- modal para adicionar as informações da banc (ven_vendedor) -->
+    <!-- ib -= infobanca -->
+    <div class="modal-infobanca" id="modalInfoBanca">
+        <div class="modal-content-ib">
+            <div class="ib-header">
+                <h3>Conclua seu cadastro e aproveite o melhor da feira online</h3>
+                <p>Adcione os dados da sua banca ou ponto comercial</p>
+            </div>
+            <!-- form content -->
+            <form action="" class="ib-form-content">
+                <!-- nome da banca -->
+                <div class="input-ib-form">
+                    <div class="label-ib">
+                        <p class="label-ib-name">Nome da banca <span id="inputReq">*</span></p>
+                        <p class="label-ib-desc">Coloque o nome comercial de seu negócio</p>
+                    </div>
+                    <input type="text" class="input-ib" id="NomeBanca" placeholder="Ex: Banca dos Silvas" required>
+                </div>
+
+                <!-- CNPJ -->
+                <div class="input-ib-form">
+                    <div class="label-ib">
+                        <p class="label-ib-name">CNPJ <span id="inputReq">*</span></p>
+                        <p class="label-ib-desc">Coloque numero do CNPJ associado ao seu  negócio</p>
+                    </div>
+                    <input type="text" class="input-ib" id="numCNPJ" placeholder="Ex: 12.345.678/0001-10" required>
+                </div>
+
+                <!-- entrega + frete -->
+                <div class="ib-entregafrete">
+                    <!-- Faz entregas? -->
+                    <div class="input-ib-form">
+                        <div class="label-ib">
+                            <p class="label-ib-name">Faz entregas? <span id="inputReq">*</span></p>
+                            <p class="label-ib-desc">Faz entregas em domicilio ou não?</p>
+                        </div>
+                        <input type="text" class="input-ib" id="fazEntrega" placeholder="Escolha" list="fazentrega" required>
+                        <datalist id="fazentrega">
+                            <option value="Sim">
+                            <option value="Não">
+                        </datalist>
+                    </div>
+
+                    <!-- Valor do frete -->
+                    <div class="input-ib-form">
+                        <div class="label-ib">
+                            <p class="label-ib-name">Valor do frete <span id="inputReq">*</span></p>
+                            <p class="label-ib-desc">Valor do frete caso faça entregas</p>
+                        </div>
+                        <input type="number" class="input-ib" id="valorFrete" placeholder="Ex: 4,60">
+                    </div>
+                </div>
+
+                <!-- Chave PIX -->
+                <div class="input-ib-form">
+                    <div class="label-ib">
+                        <p class="label-ib-name">Chave PIX <span id="inputReq">*</span></p>
+                        <p class="label-ib-desc">Insira sua chave pix para receber os pagamentos</p>
+                    </div>
+                    <input type="text" class="input-ib" id="chavePIX" placeholder="Ex: suachavepix@gmail.com" required>
+                </div>
+
+                <!-- Descrição -->
+                <div class="input-ib-form">
+                    <div class="label-ib">
+                        <p class="label-ib-name">Descrição</p>
+                        <p class="label-ib-desc">Coloque informações adicionais ou  avisos para seus clientes</p>
+                    </div>
+                    <input type="text" class="input-ib" id="bancaDesc" placeholder="Ex: Não entrego aos domingos">
+                </div>
+
+                <button type="submit" class="ib-button" id="btnIB">Adicionar endereço e finalizar cadastro</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- modal para o endereço ()-->
+    <!-- ed = endereços -->
+    <div class="modal-infobanca" id="modalEnderecos">
+        <div class="modal-content-ib">
+            <div class="ed-header">
+                <button id="ed-backToIB" class="backBtnIB">
+                    <i class="bx bx-arrow-back"></i>
+                </button>
+                <div class="ib-header">
+                    <h3>Coloque seu endereço e finalize seu cadastro</h3>
+                    <p>Adcione os dados da sua banca ou ponto comercial</p>
+                </div>
+            </div>
+
+            <form action="" class="ib-form-content" >
+                <!-- endereço -->
+                <div class="input-ib-form">
+                    <div class="label-ib">
+                        <p class="label-ib-name">Endereço <span id="inputReq">*</span></p>
+                        <p class="label-ib-desc">Endereço do seu ponto comercial</p>
+                    </div>
+                    <input type="text" class="input-ib" id="endereçoBanca" placeholder="Ex: Rua A, Centro" required>
+                </div>
+
+                <!-- Número -->
+                <div class="input-ib-form">
+                    <div class="label-ib">
+                        <p class="label-ib-name">Número <span id="inputReq">*</span></p>
+                        <p class="label-ib-desc">Numero do seu ponto comercial</p>
+                    </div>
+                    <input type="text" class="input-ib" id="numeroBanca" placeholder="Ex: 125" required>
+                </div>
+
+                <!-- CEP -->
+                <div class="input-ib-form">
+                    <div class="label-ib">
+                        <p class="label-ib-name">CEP <span id="inputReq">*</span></p>
+                        <p class="label-ib-desc">Insira o CEP da sua cidade ou bairro</p>
+                    </div>
+                    <input type="text" class="input-ib" id="cepBanca" placeholder="Ex: 12530-000" required>
+                </div>
+
+                <!-- Complemento -->
+                <div class="input-ib-form">
+                    <div class="label-ib">
+                        <p class="label-ib-name">Complemento <span id="inputReq">*</span></p>
+                        <p class="label-ib-desc">Coloque informações adicionais sobre seu endereço</p>
+                    </div>
+                    <input type="text" class="input-ib" id="cepBanca" placeholder="Ex: Centro, ao lado do mercadinho 2 irmãos" required>
+                </div>
+
+                <button type="submit" class="ib-button" id="btnFinalizarCadastro">Finalizar cadastro</button>
+            </form>
+        </div>
+    </div>

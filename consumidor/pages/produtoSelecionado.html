@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="../../assets/css/master.css">
+    <link rel="stylesheet" href="../../assets/css/pages-css/produtoSelecionado.css">
+    <link rel="stylesheet" href="../../assets/css/pages-css/resultadoBusca.css">
+    <link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/x-icon">
+    <!-- box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Produdo selecionado</title>
+</head>
+<body>
+    <!-- nav -->
+    <section>
+        <!-- navbar -->
+            <nav class="nav">
+                <div class="left-links">
+                    <i id="btn-menu" class="bx bx-menu" ></i>
+                    <a href="#" class="logo">Semeie.</a>
+    
+                    <ul class="navbar">
+                        <li><a href="../homeCons.html">Inicio</a></li>
+                        <li><a href="#">Categorias</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Bancas</a></li>
+                    </ul>
+                </div>
+    
+                <div class="right-links">
+                    <ul class="nav-links">
+    
+                        <li><a href="#">
+                            <div class="search-box">
+                                <i id="search-icon" class="nav-icon" data-feather="search"></i>
+                                <input type="text" name="Search" id="search" placeholder="Procurar produto..">
+                            </div>
+                        </a></li>
+    
+                        <!-- cart icon -->
+                        <li><a href="#" class="cart-icon dropdown" onclick="myDropdown()">
+                            <span class="qtd-itens">3</span>
+                            <i class="nav-icon" data-feather="shopping-bag"></i>
+                            <!-- dropdown -->
+                            <div class="cart-dropdown" id="myDropdown">
+                               <div id="cart-content" class="cart-content-dropdown">
+                                    <!-- cart header -->
+                                    <div class="cart-header">
+                                        <div class="cart-header-text">
+                                            <h3>Meu carinho</h3>
+                                            <p>Os produtos são separados por vendedor</p>
+                                        </div>
+    
+                                        <button id="cartClose">
+                                            <i class='bx bx-x-circle'></i>
+                                        </button>
+                                    </div>
+                              
+                                    <!-- cart order-->
+                                    <div class="cart-order">
+                                        <!-- info vendedor -->
+                                        <div class="order-seller-info">
+                                            <div class="seller-info">
+                                                <h3 id="nomeBanca">Nome da Banca</h3>
+                                                <div class="seller-detais-info">
+                                                    <p id="distanc">23 Km</p>
+                                                    <img src="../assets/img/result imgs/circledivider.png" alt="" class="circle-divider">
+                                                    <p id="freteValor">Frete grátis</p>
+                                                </div>
+                                            </div>
+                                            <!-- btn chat -->
+                                            <button id="sellerChat">
+                                                <i class='bx bxs-message-square-dots'></i>
+                                            </button>
+                                        </div>
+    
+                                        <!-- order itens -->
+                                        <div class="order-itens-content">
+                                            <!-- item order 01 -->
+                                            <div class="order-item">
+                                                <!-- nome + excluir -->
+                                                <div class="order-item-top">
+                                                    <p id="itemName">Kiwi</p>
+                                                    <button id="btnDelItem">
+                                                        <i class='bx bxs-trash'></i>
+                                                    </button>
+                                                </div>
+                                                <!-- detais + total -->
+                                                <div class="order-item-bottom">
+                                                    <div class="order-item-detail">
+                                                        <!-- qtd -->
+                                                        <div class="order-item-qtdBtn">
+                                                            <button id="btnQtdMin">
+                                                                <i class="bx bx-minus"></i>
+                                                            </button>
+    
+                                                            <span class="numQtd">
+                                                                2
+                                                            </span>
+                                                            <button id="btnQtdMax">
+                                                                <i class="bx bx-plus"></i>
+                                                            </button>
+                                                        </div>
+                                                        <!-- un -->
+                                                        <img class="circle-divider" src="../assets/img/result imgs/circledivider.png" alt="">
+                                                        <div class="item-un-venda">
+                                                            <span>Kg</span>
+                                                        </div>
+                                                    </div>
+    
+                                                    <span id="itemTotal">R$ 19,20</span>
+                                                </div>
+                                            </div>
+    
+                                            <!-- item order 02 -->
+                                            <div class="order-item">
+                                                <!-- nome + excluir -->
+                                                <div class="order-item-top">
+                                                    <p id="itemName">Maça</p>
+                                                    <button id="btnDelItem">
+                                                        <i class='bx bxs-trash'></i>
+                                                    </button>
+                                                </div>
+                                                <!-- detais + total -->
+                                                <div class="order-item-bottom">
+                                                    <div class="order-item-detail">
+                                                        <!-- qtd -->
+                                                        <div class="order-item-qtdBtn">
+                                                            <button id="btnQtdMin">
+                                                                <i class="bx bx-minus"></i>
+                                                            </button>
+    
+                                                            <span class="numQtd">
+                                                                1
+                                                            </span>
+                                                            <button id="btnQtdMax">
+                                                                <i class="bx bx-plus"></i>
+                                                            </button>
+                                                        </div>
+                                                        <!-- un -->
+                                                        <img class="circle-divider" src="../assets/img/result imgs/circledivider.png" alt="">
+                                                        <div class="item-un-venda">
+                                                            <span>Kg</span>
+                                                        </div>
+                                                    </div>
+    
+                                                    <span id="itemTotal">R$ 6,56</span>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <!-- order total -->
+                                        <div class="order-total-price">
+                                            <p>Total</p>
+                                            <span id="valorTotal">
+                                                R$23,61
+                                            </span>
+                                        </div>
+    
+                                        <!-- btn send order -->
+                                        <button type="submit" id="btnSendOrder">
+                                            Enviar pedido
+                                        </button>
+                                    </div>
+                               </div>
+                            </div>
+                        </a>
+                        </li>
+                        
+                        <!-- user icon -->
+                        <li><a href="#">
+                            <i class="nav-icon bx bx-user-circle" ></i>
+                        </a></li>
+                    </ul>
+                </div>
+            </nav> 
+    </section>
+
+     <!-- title result -->
+     <section>
+        <div class="title-info-search">
+            <h3 class="result-title">Resultado para <span class="item-search">Repolho</span></h3>
+        </div>
+     </section>
+
+     <!-- item result -->
+     <section class="selected-item">
+        <div class="selected-item-group">
+             <!-- info banca -->
+            <div class="result-group-header">
+                <img src="../../assets/img/result imgs/profile2.png" alt="" class="img-profile">
+                <div class="result-profile-info">
+                    <div class="profile-info-left">
+                        <h3 id="ven_nomeCorporativo">Antônio Siqueira</h3>
+                        <div class="profile-details-info">
+                            <!-- item detail profile info -->
+                            <div class="info-avaliaçao">
+                                <img src="../../assets/img/result imgs/Star.png" alt="star icon">
+                                <span>4.2</span>
+                            </div>
+                            <img class="circle-divider" src="../../assets/img/result imgs/circledivider.png" alt="">
+                            <!-- item detail profile info -->
+                            <div class="info-distancia">
+                                <span>33km</span>
+                            </div>
+                            <img class="circle-divider" src="../../assets/img/result imgs/circledivider.png" alt="">
+                            <!-- item detail profile info -->
+                            <div class="info-tempo">
+                                <span>29min</span>
+                            </div>
+                            <img class="circle-divider" src="../../assets/img/result imgs/circledivider.png" alt="">
+                            <!-- item detail profile info -->
+                            <div class="info-frete">
+                                <span>Frete grátis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="fav-profile">
+                        <i class="bx bx-heart "></i>
+                    </div> -->
+                </div>
+            </div>
+
+            
+            <!-- produto selecionado -->
+            <div class="selected-item-content">
+                <div class="selected-item-img">
+                    <img src="../../assets/img/produtos/repolho.png" alt="">
+                </div>
+                <!-- infos -->
+                <div class="selected-item-infos">
+                    <div class="selected-item-infos-top">
+                        <h3>Mini repolho</h3>
+                        <div class="infos-about">
+                            <div class="item-avaliacao">
+                                <img src="../../assets/img/result imgs/Star.png" alt="">
+                                <span>3.9</span>
+                            </div>
+                            <img class="circle-divider" src="../../assets/img/result imgs/circledivider.png" alt="">
+                            <div class="item-un-venda">
+                                <span>Kg</span>
+                            </div>
+                            <img class="circle-divider" src="../../assets/img/result imgs/circledivider.png" alt="">
+                            <div class="item-peso-apr">
+                                <span>Aproximadamente 300g</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="selected-itens-info-middle">
+                        <p class="item-descricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, repellat? Esse quis tempora veritatis. Minus voluptates veniam aperiam provident vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quam!</p>
+
+                        <div class="item-qtdPreco">
+                            <div class="itemqtd">
+                                <button id="itemqtdMenos"> <i class="bx bx-minus"></i></button>
+                                <span id="numQtd">1</span>
+                                <button id="itemqtdMais"> <i class="bx bx-plus"></i></button>
+                            </div>
+                            <div id="itemPreco">
+                                <span>R$ 4,58</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="addToCart" class="btnCart">
+                        <i class="bx bx-shopping-bag"></i>
+                        <span>Adicionar</span>
+                    </button>
+                </div>
+            
+                  <!-- others pics -->
+                <div class="selected-item-pics">
+                    <div class="item-extra-pic">
+                        <img src="../../assets/img/produtos/otherpic.png" alt="" onclick="openImg(this)">
+                    </div>
+                    <div class="item-extra-pic">
+                        <img src="../../assets/img/result imgs/repolho.png" alt="" onclick="openImg(this)">
+                    </div>
+                    <div class="item-extra-pic">
+                        <img src="../../assets/img/produtos/otherpic02.png" alt="" onclick="openImg(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- bottom outros produtos -->
+    <section>
+    <div class="bottom-content">
+        <div class="bottom-header">
+            <h3>Bancas populares</h3>
+        </div>
+        <div class="result-group-cards">
+            <!-- card item-->
+            <!-- item 01 -->
+            <div class="result-card-item">
+                <div class="result-item-img">
+                    <img src="../../assets/img/produtos/alface.png" alt="">
+                </div>
+                <div class="result-item-info">
+                    <div class="result-item-info-top">
+                        <p id="item-name">Alface crespa</p>
+                        <p id="item-price">R$ 2,56</p>
+                    </div>
+                    <div class="result-item-info-bottom">
+                        <div class="item-avaliacao">
+                            <img src="../../assets/img/result imgs/Star.png" alt="">
+                            <span>3.9</span>
+                        </div>
+                        <img class="circle-divider" src="../../assets/img/result imgs/circledivider.png" alt="">
+                        <div class="item-un-venda">
+                            <span>Un</span>
+                        </div>
+                    </div>
+                     <!-- qtd + btn card -->
+                     <div class="result-item-info-qtdCart">
+                        <!-- qtd -->
+                        <div class="result-item-qtdBtn">
+                            <button id="btnQtdMin">
+                                <!-- <img src="../../assets/img/icons/qtnMin.png" alt=""> -->
+                                <i class="bx bx-minus"></i>
+                            </button>
+
+                            <span class="numQtd">
+                                1
+                            </span>
+                            <button id="btnQtdMax">
+                                <i class="bx bx-plus"></i>
+                                
+                            </button>
+                        </div>
+
+                        <!-- btn cart -->
+                        <button class="result-item-btnCart">
+                            <!-- <img src="../../assets/img/icons/bag icon.png" alt=""> -->
+                            <i class="bx bx-shopping-bag"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- item 02 -->
+            <div class="result-card-item">
+                <div class="result-item-img">
+                    <img src="../../assets/img/produtos/cenoura.png" alt="">
+                </div>
+                <div class="result-item-info">
+                    <div class="result-item-info-top">
+                        <p id="item-name">Cenoura baby </p>
+                        <p id="item-price">R$ 4,58</p>
+                    </div>
+                    <div class="result-item-info-bottom">
+                        <div class="item-avaliacao">
+                            <img src="../../assets/img/result imgs/Star.png" alt="">
+                            <span>34.0</span>
+                        </div>
+                        <img class="circle-divider" src="../../assets/img/result imgs/circledivider.png" alt="">
+                        <div class="item-un-venda">
+                            <span>Kg</span>
+                        </div>
+                    </div>
+                     <!-- qtd + btn card -->
+                     <div class="result-item-info-qtdCart">
+                        <!-- qtd -->
+                        <div class="result-item-qtdBtn">
+                            <button id="btnQtdMin">
+                                <!-- <img src="../../assets/img/icons/qtnMin.png" alt=""> -->
+                                <i class="bx bx-minus"></i>
+                            </button>
+
+                            <span class="numQtd">
+                                1
+                            </span>
+                            <button id="btnQtdMax">
+                                <i class="bx bx-plus"></i>
+                                
+                            </button>
+                        </div>
+
+                        <!-- btn cart -->
+                        <button class="result-item-btnCart">
+                            <!-- <img src="../../assets/img/icons/bag icon.png" alt=""> -->
+                            <i class="bx bx-shopping-bag"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- item 03 -->
+            <div class="result-card-item">
+                <div class="result-item-img">
+                    <img src="../../assets/img/result imgs/item03.png" alt="">
+                </div>
+                <div class="result-item-info">
+                    <div class="result-item-info-top">
+                        <p id="item-name">Mini repolho </p>
+                        <p id="item-price">R$ 4,58</p>
+                    </div>
+                    <div class="result-item-info-bottom">
+                        <div class="item-avaliacao">
+                            <img src="../../assets/img/result imgs/Star.png" alt="">
+                            <span>3.9</span>
+                        </div>
+                        <img class="circle-divider" src="../../assets/img/result imgs/circledivider.png" alt="">
+                        <div class="item-un-venda">
+                            <span>Kg</span>
+                        </div>
+                    </div>
+                     <!-- qtd + btn card -->
+                     <div class="result-item-info-qtdCart">
+                        <!-- qtd -->
+                        <div class="result-item-qtdBtn">
+                            <button id="btnQtdMin">
+                                <!-- <img src="../../assets/img/icons/qtnMin.png" alt=""> -->
+                                <i class="bx bx-minus"></i>
+                            </button>
+
+                            <span class="numQtd">
+                                1
+                            </span>
+                            <button id="btnQtdMax">
+                                <i class="bx bx-plus"></i>
+                                
+                            </button>
+                        </div>
+
+                        <!-- btn cart -->
+                        <button class="result-item-btnCart">
+                            <!-- <img src="../../assets/img/icons/bag icon.png" alt=""> -->
+                            <i class="bx bx-shopping-bag"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pop-arrow-icon">
+                <img src="../../assets/img/arrowleft.png" alt="">
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- opem img -->
+    <div id="imgView" class="modal">
+        <span class="closeImg" onclick="closeImg()"> <i class="bx bx-x"></i></span>
+        <img class="modal-content" id="imgViewContent">
+        <a class="btnPrev" onclick="switchImg(-1)"> <i class="bx bx-chevron-left"></i></a>
+        <a class="btnNext" onclick="switchImg(1)"> <i class="bx bx-chevron-right"></i></a>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+
+    <!-- js -->
+     <script src="../assets/js/pages-js/produtoSelecionado.js"></script>
+     <script src="../../assets/js/master.js"></script>
+     <script src="https://unpkg.com/feather-icons"></script>
+     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+     <script>
+         feather.replace();
+     </script>
+</body>
+</html>
